@@ -1,0 +1,445 @@
+fileFormatVersion: 2
+guid: 9745272fdb739094496c1f8a8cff8e19
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 216
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData:
+  - name: Cannon Ball  2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2894
+      y: 4
+      width: 2398
+      height: 2347
+    spriteID: 7dd4dcdec28c2a84797e08c2e70f9cd6
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2446, y: -311}
+  - name: Cannon Ball 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2894
+      y: 2359
+      width: 1797
+      height: 1908
+    spriteID: 9811f85c3b862ea4d83712d44cda2723
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2371, y: 2077}
+  - name: "P\xEDrate Ship Full Cannon"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2882
+      height: 2604
+    spriteID: 67c6109d6bda97148977dcac67eb43cf
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -112, y: -112}
+  - name: "P\xEDrate Ship Cannon Start"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2616
+      width: 2882
+      height: 2604
+    spriteID: 6a32ffd7aa403ec4e9ba3b2731e82193
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -112, y: 2500}
+  - name: "P\xEDrate Ship original"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5228
+      width: 2882
+      height: 2604
+    spriteID: 281d661c289901a4eb351e07713283cc
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -112, y: 5112}
+  rigSpriteImportData:
+  - name: Cannon Ball  2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2894
+      y: 4
+      width: 2398
+      height: 2347
+    spriteID: 36f77900d4ffa7347b6b42fc1721bbd7
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2446, y: -311}
+  - name: Cannon Ball 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2894
+      y: 2359
+      width: 1797
+      height: 1908
+    spriteID: b75eb92dc39f09845935b5d1843e8c0a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2371, y: 2077}
+  - name: "P\xEDrate Ship Full Cannon"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2882
+      height: 2604
+    spriteID: c3f5d33bd8015f849a95592e8b759459
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -112, y: -112}
+  - name: "P\xEDrate Ship Cannon Start"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2616
+      width: 2882
+      height: 2604
+    spriteID: 4c89daf3f0a7689448c2024cf16952dc
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -112, y: 2500}
+  - name: "P\xEDrate Ship original"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5228
+      width: 2882
+      height: 2604
+    spriteID: ebaa01b926a464c48bc21addeec16cbc
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -112, y: 5112}
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 3048, y: 3048}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 8192
+  textureActualHeight: 8192
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 0
+  mosaicPSDLayers:
+  - name: Cannon Ball  2
+    spriteName: Cannon Ball  2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7dd4dcdec28c2a84797e08c2e70f9cd6
+    layerID: 37
+    mosaicPosition: {x: 2894, y: 4}
+  - name: Cannon Ball 1
+    spriteName: Cannon Ball 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9811f85c3b862ea4d83712d44cda2723
+    layerID: 33
+    mosaicPosition: {x: 2894, y: 2359}
+  - name: "P\xEDrate Ship Full Cannon"
+    spriteName: "P\xEDrate Ship Full Cannon"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 67c6109d6bda97148977dcac67eb43cf
+    layerID: 32
+    mosaicPosition: {x: 4, y: 4}
+  - name: "P\xEDrate Ship Cannon Start"
+    spriteName: "P\xEDrate Ship Cannon Start"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6a32ffd7aa403ec4e9ba3b2731e82193
+    layerID: 20
+    mosaicPosition: {x: 4, y: 2616}
+  - name: "P\xEDrate Ship original"
+    spriteName: "P\xEDrate Ship original"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 281d661c289901a4eb351e07713283cc
+    layerID: 8
+    mosaicPosition: {x: 4, y: 5228}
+  rigPSDLayers:
+  - name: Cannon Ball  2
+    spriteName: Cannon Ball  2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 36f77900d4ffa7347b6b42fc1721bbd7
+    layerID: 37
+    mosaicPosition: {x: 2894, y: 4}
+  - name: Cannon Ball 1
+    spriteName: Cannon Ball 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b75eb92dc39f09845935b5d1843e8c0a
+    layerID: 33
+    mosaicPosition: {x: 2894, y: 2359}
+  - name: "P\xEDrate Ship Full Cannon"
+    spriteName: "P\xEDrate Ship Full Cannon"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c3f5d33bd8015f849a95592e8b759459
+    layerID: 32
+    mosaicPosition: {x: 4, y: 4}
+  - name: "P\xEDrate Ship Cannon Start"
+    spriteName: "P\xEDrate Ship Cannon Start"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4c89daf3f0a7689448c2024cf16952dc
+    layerID: 20
+    mosaicPosition: {x: 4, y: 2616}
+  - name: "P\xEDrate Ship original"
+    spriteName: "P\xEDrate Ship original"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ebaa01b926a464c48bc21addeec16cbc
+    layerID: 8
+    mosaicPosition: {x: 4, y: 5228}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: "P\xEDrate ship cannon animation  Texture"
+  prefabAssetName: "P\xEDrate ship cannon animation  Prefab"
+  spriteLibAssetName: "P\xEDrate ship cannon animation  Sprite Lib"
+  secondarySpriteTextures: []
