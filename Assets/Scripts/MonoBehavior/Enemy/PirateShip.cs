@@ -34,7 +34,7 @@ public class PirateShip : MonoBehaviour
             
             timeBtwShots = startTimeBtwShots;
 
-            animator.Play("Base Layer.idle");
+            animator.Play("pirateShipIdle");
         }
         else
         {

@@ -14,16 +14,6 @@ public class GlobarVars : MonoBehaviour
     public static int LAYER_PLAYER_SHIP = 7;
     public static int LAYER_ENEMIES = 8;
 
-    // standard vectors
-    public static Vector3 VECTOR_UP = new Vector3(0,1,0);
-    public static Vector3 VECTOR_UP_LEFT = new Vector3(-1,1,0);
-    public static Vector3 VECTOR_UP_RIGHT = new Vector3(1,1,0);
-    public static Vector3 VECTOR_DOWN = new Vector3(0,-1,0);
-    public static Vector3 VECTOR_DOWN_LEFT = new Vector3(-1,-1,0);
-    public static Vector3 VECTOR_DOWN_RIGHT = new Vector3(1,-1,0);
-    public static Vector3 VECTOR_LEFT = new Vector3(-1,0,0);
-    public static Vector3 VECTOR_RIGHT = new Vector3(1,1,0);
-
     // projectile settings
 
     // rocket
@@ -31,7 +21,7 @@ public class GlobarVars : MonoBehaviour
     public static float PROJECTILE_ROCKET_BULLET_DAMAGE = 50;
     public static int PROJECTILE_ROCKET_MAX_NUM_OF_ENEMIES = 2;
     public static Vector3[] PROJECTILE_ROCKET_VECTORS = new Vector3[] {
-        VECTOR_UP,
+        Vector3.up,
     }; 
 
     // energy ball
@@ -39,9 +29,9 @@ public class GlobarVars : MonoBehaviour
     public static float PROJECTILE_ENERGYBALL_BULLET_DAMAGE = 34;
     public static int PROJECTILE_ENERGYBALL_MAX_NUM_OF_ENEMIES = 1;
     public static Vector3[] PROJECTILE_ENERGYBALL_VECTORS = new Vector3[] {
-        VECTOR_UP,
-        VECTOR_UP_LEFT,
-        VECTOR_UP_RIGHT
+        Vector3.up,
+        Vector3.up + Vector3.left,
+        Vector3.up + Vector3.right,
     }; 
 
     

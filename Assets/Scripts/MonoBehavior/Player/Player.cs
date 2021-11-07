@@ -66,8 +66,8 @@ public class Player : MonoBehaviour
     }
 
     /******************** PUBLIC FUNCTIONS ********************/
-    public void takeDamage(float DMG) {
-        Utilities.logEvent(DMG + " taken", "PlasticRings");
+    public void takeDamage(float DMG, string collisionName) {
+        Utilities.logDamage(gameObject.name, collisionName, DMG);
         CURR_HEALTH -= DMG;
     }
 
@@ -80,39 +80,8 @@ public class Player : MonoBehaviour
     }
 
     /******************** COLLISION HANDLERS ********************/
-    /*
     private void OnTriggerEnter2D(Collider2D col) 
     {
-        // find name of root GameObject and log collision
-        string nameOfCollisionObject = Utilities.findNameOfNonGenericParent(col.gameObject);
-        Utilities.logCollision("Player", nameOfCollisionObject);
-
-        // retrieve root GameObject
-        GameObject parentGo = Utilities.findNonGenericParent(col.gameObject);
-
-        // if player collides with enemy
-        if (col.gameObject.layer == GlobarVars.LAYER_ENEMIES);
-        {
-            // player takes damange
-            takeDamage(parentGo.GetComponent<Enemy>().getDamage());
-
-            if(CURR_HEALTH >= 0)
-            {
-                // play damage animation
-            }
-            
-            else
-            {
-                // play death animation
-            }
-        }
-    }
-    */
-
-    private void OnTriggerEnter2D(Collider2D col) 
-    {
-        Debug.Log("player collided with something");
-
         // if collision is with an enemy
          if(col.gameObject.layer == GlobarVars.LAYER_ENEMIES)
          {
@@ -136,16 +105,16 @@ public class Player : MonoBehaviour
             frameCounter = 0;
 
             // check how much damage the enemy deals
-            float ENEMY_DMG = parentGo.GetComponent<Enemy>().getDamage();
+            float ENEMY_DMG = parentGo.GetComponent<EnemyHealth>().getDamage();
 
             // take damage
-            //takeDamage(ENEMY_DMG);
-            gameObject.GetComponent<Player>().takeDamage(ENEMY_DMG);
+            gameObject.GetComponent<Player>().takeDamage(ENEMY_DMG, parentName);
 
             // log damage
             Utilities.logDamage( gameObject.name, parentName, ENEMY_DMG);
 
-            Instantiate(hitAnimation, gameObject.transform.position + (GlobarVars.VECTOR_UP), Quaternion.Euler(new Vector3(0,0,0)));
+            // instantiate collision animation
+            Instantiate(hitAnimation, gameObject.transform.position + (Vector3.up), Quaternion.Euler(new Vector3(0,0,0)));
         }
     }
 

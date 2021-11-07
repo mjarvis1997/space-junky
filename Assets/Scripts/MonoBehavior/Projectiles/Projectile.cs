@@ -36,12 +36,6 @@ public class Projectile : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ts = GetComponent<Transform>();
     }
-    void Update() 
-    { 
-        // move projectile
-        //rb.MovePosition(SHOOT_DIR * 1 * Time.deltaTime);
-        //transform.position += SHOOT_DIR * MOVE_SPEED * Time.deltaTime;
-    }
 
     void FixedUpdate()
     {
@@ -52,13 +46,10 @@ public class Projectile : MonoBehaviour
     /******************** COLLISION HANDLERS ********************/
     private void OnTriggerEnter2D(Collider2D col) 
     {
-        Debug.Log("projectile collided with something");
-
         // if collision is with an enemy
          if(col.gameObject.layer == GlobarVars.LAYER_ENEMIES)
          {
              HandleEnemyCollision(col.gameObject);
-             Debug.Log("projectile collided with ENEMY");
          }
     }
     
@@ -83,13 +74,11 @@ public class Projectile : MonoBehaviour
             }
         }
 
-        Debug.Log("projectile stats - isBelowMaxNumOfCollisions: " + isBelowMaxNumOfCollisions + " | isRepeatCollision: " + isRepeatCollision);
-
         // decide if the collision is valid
         if(isBelowMaxNumOfCollisions && !isRepeatCollision) 
         {
             // tell the enemy to take damage
-            parentGo.GetComponent<Enemy>().takeDamage(BULLET_DAMAGE);
+            parentGo.GetComponent<EnemyHealth>().takeDamage(BULLET_DAMAGE);
             Debug.Log("projectile stats - isBelowMaxNumOfCollisions: " + isBelowMaxNumOfCollisions + " | isRepeatCollision: " + isRepeatCollision);
 
             // log damage
@@ -99,7 +88,7 @@ public class Projectile : MonoBehaviour
             namesOfEnemiesHit.Add(parentName);
             numOfEnemyCollisions++;
 
-            Instantiate(hitAnimation, gameObject.transform.position + (GlobarVars.VECTOR_UP), Quaternion.Euler(new Vector3(0,0,0)));
+            Instantiate(hitAnimation, gameObject.transform.position + (Vector3.up), Quaternion.Euler(new Vector3(0,0,0)));
         }
     }
 }

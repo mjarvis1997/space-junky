@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     /******************** PUBLIC VARIABLES ********************/
     public float MAX_HEALTH;
@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
     void handleMovement() {
 
         // move enemy
-        transform.position += MOVE_DIR * MOVE_SPEED * Time.deltaTime;
+        //transform.position += MOVE_DIR * MOVE_SPEED * Time.deltaTime;
     }
 
     /******************** PUBLIC FUNCTIONS ***************/
