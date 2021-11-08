@@ -42,17 +42,17 @@ public class PlayerShootProjectiles : MonoBehaviour
         switch(projectileCode) 
         {
             case 0:
-                settings = GlobarVars.PROJECTILE_ROCKET;
+                settings = GlobalVars.PROJECTILE_ROCKET;
                 prefab = PREFAB_ROCKET;
                 break;
 
             case 1:
-                settings = GlobarVars.PROJECTILE_ENERGYBALL;
+                settings = GlobalVars.PROJECTILE_ENERGYBALL;
                 prefab = PREFAB_ENERGYBALL;
                 break;
 
             default:
-                settings = GlobarVars.PROJECTILE_ROCKET;
+                settings = GlobalVars.PROJECTILE_ROCKET;
                 prefab = PREFAB_ROCKET;
                 break;
         }

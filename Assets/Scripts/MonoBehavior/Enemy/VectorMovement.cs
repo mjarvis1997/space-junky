@@ -3,20 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMoveVector : MonoBehaviour
+public class VectorMovement : MonoBehaviour
 {
     /******************** PUBLIC VARIABLES ********************/
-    private List<VectorMovePath> paths;
 
     /******************** PRIVATE VARIABLES ***************/
     private Rigidbody2D rb;
     private Transform ts;
 
-    private int currentVector = 0;
     private Vector3 checkpointPosition;
     private float distanceTraveled;
-    private VectorMovePath curr;
     private bool isDoneChangingVectors = false;
+
+    private List<VectorPath> vectorInfo;
+    private VectorPath curr;
+    private int currentVector = 0;
 
 
     /******************** STANDARD UNITY FUNCTIONS ********************/
@@ -39,10 +40,10 @@ public class EnemyMoveVector : MonoBehaviour
     }
 
     /******************** PUBLIC FUNCTIONS ***************/
-    public void setPaths(List<VectorMovePath> paths)
+    public void setPaths(List<VectorPath> vectorInfo)
     {
-        this.paths = paths;
-        curr = paths[0];
+        this.vectorInfo = vectorInfo;
+        curr = vectorInfo[0];
     }
 
 
@@ -50,24 +51,24 @@ public class EnemyMoveVector : MonoBehaviour
     void handleMovement() 
     {
         // if we have finished traveling the current vector in the list
-        if(!isDoneChangingVectors && distanceTraveled >= paths[currentVector].MOVE_DISTANCE)
+        if(!isDoneChangingVectors && distanceTraveled >= vectorInfo[currentVector].move_distance)
         {
             // increment to next vector
             ++currentVector;
 
             // update position of checkpoint and vector reference
             checkpointPosition = ts.position;
-            curr = paths[currentVector];
+            curr = vectorInfo[currentVector];
 
             // if this is the last vector in the list
-            if(currentVector == paths.Count - 1)
+            if(currentVector == vectorInfo.Count - 1)
             {
                 isDoneChangingVectors = true;
             }
         }
 
         // move based on current path in list
-        rb.MovePosition(ts.position + (curr.MOVE_DIR * curr.MOVE_SPEED * Time.deltaTime));
+        rb.MovePosition(ts.position + (curr.move_dir * curr.move_speed * Time.deltaTime));
     }
 }
 

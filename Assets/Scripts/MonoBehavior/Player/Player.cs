@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col) 
     {
         // if collision is with an enemy
-         if(col.gameObject.layer == GlobarVars.LAYER_ENEMIES)
+         if(col.gameObject.layer == GlobalVars.LAYER_ENEMIES)
          {
              HandleEnemyCollision(col.gameObject);
          }
