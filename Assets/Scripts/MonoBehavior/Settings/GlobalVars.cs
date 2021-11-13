@@ -50,30 +50,23 @@ public class GlobalVars : MonoBehaviour
         PROJECTILE_ENERGYBALL_MAX_NUM_OF_ENEMIES
     );
 
-    
-
     // frequently used references
-    static Quaternion defaultOrientation = Quaternion.Euler(new Vector3(0, 0, 90));
-
+    static Quaternion defaultOrientation = Quaternion.Euler(new Vector3(0, 0, 0));
 
     // movement paths
 
     // basic zig zag pattern that travels down and to the right
     public static List<VectorPath> PATH_ZIGZAG_DOWN = new List<VectorPath>() {
-        new VectorPath(2, 6, Vector3.down + Vector3.right),
-        new VectorPath(2, 6, (Vector3.up * 0.5f) + Vector3.right),
-        new VectorPath(2, 4, Vector3.down + Vector3.right),
-        new VectorPath(2, 4, (Vector3.up * 0.5f) + Vector3.right),
-        new VectorPath(2, 4, Vector3.down + Vector3.right)
+        new VectorPath(20, 6, Vector3.down + Vector3.right),
+        new VectorPath(20, 6, (Vector3.up * 0.5f) + Vector3.right),
+        new VectorPath(20, 4, Vector3.down + Vector3.right),
+        new VectorPath(20, 4, (Vector3.up * 0.5f) + Vector3.right),
+        new VectorPath(20, 4, Vector3.down + Vector3.right)
     };
 
     public static SpawnConfig SPAWN_BASIC_LEFT = new SpawnConfig(
-        5,
         new Vector3(-10, 7, 0), 
         Vector3.down + Vector3.left,
         defaultOrientation
     );
-    
-
-
 }

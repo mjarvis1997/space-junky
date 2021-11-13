@@ -287,6 +287,8 @@ GameObject:
   m_Component:
   - component: {fileID: 776716189938537127}
   - component: {fileID: 783929950258923101}
+  - component: {fileID: 3213132106501368053}
+  - component: {fileID: 8165222507222093995}
   m_Layer: 8
   m_Name: PirateShip
   m_TagString: Untagged
@@ -322,11 +324,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0f7864156a7e764191cf03a0e82600b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CURR_HEALTH: 1000
   MAX_HEALTH: 1000
   DAMAGE: 1
-  MOVE_SPEED: 0
-  MOVE_DIR: {x: -1, y: -0.5, z: 0}
+--- !u!114 &3213132106501368053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776716189938537120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af982c93def069245a1d2e52321b94e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &8165222507222093995
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776716189938537120}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1242540394231975020
 GameObject:
   m_ObjectHideFlags: 0

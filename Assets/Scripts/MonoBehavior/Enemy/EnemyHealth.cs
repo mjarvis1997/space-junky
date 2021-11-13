@@ -7,8 +7,6 @@ public class EnemyHealth : MonoBehaviour
     /******************** PUBLIC VARIABLES ********************/
     public float MAX_HEALTH;
     public float DAMAGE;
-    public float MOVE_SPEED;
-    public Vector3 MOVE_DIR;
 
     /******************** PRIVATE VARIABLES ********************/
     private float CURR_HEALTH;
@@ -23,7 +21,6 @@ public class EnemyHealth : MonoBehaviour
     void Update()
     {
         handleHealth();
-        handleMovement();
     }
 
     /******************** PRIVATE FUNCTIONS ***************/
@@ -38,12 +35,6 @@ public class EnemyHealth : MonoBehaviour
         {
             die();
         }
-    }
-
-    void handleMovement() {
-
-        // move enemy
-        //transform.position += MOVE_DIR * MOVE_SPEED * Time.deltaTime;
     }
 
     /******************** PUBLIC FUNCTIONS ***************/

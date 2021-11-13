@@ -17,6 +17,11 @@ public class Projectile : MonoBehaviour
     private Vector3 SHOOT_DIR;
     private Rigidbody2D rb;
     private Transform ts;
+    private Camera cam;
+    private float cameraHeight;
+    private float cameraWidth;
+    // how far a projectile can travel off camera before being deleted
+    private float cameraOffset = 30;
 
     private int numOfEnemyCollisions = 0;
     private List<string> namesOfEnemiesHit = new List<string>();
@@ -35,6 +40,22 @@ public class Projectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         ts = GetComponent<Transform>();
+
+        // store camera dimensions
+        // cameraOffset determines how far a projectile can travel off camera before being deleted
+        cam = Camera.main;
+        cameraHeight = (2f * cam.orthographicSize) + cameraOffset;
+        cameraWidth = (cameraHeight * cam.aspect) + cameraOffset;
+    }
+
+    void Update()
+    {
+        // if projectile goes off screen
+        if(Math.Abs(ts.position.x) > cameraWidth/2 || Math.Abs(ts.position.y) > cameraHeight/2 )
+        {
+            Debug.Log("projectile is off screen!");
+            Destroy(gameObject);
+        }
     }
 
     void FixedUpdate()
@@ -88,6 +109,7 @@ public class Projectile : MonoBehaviour
             namesOfEnemiesHit.Add(parentName);
             numOfEnemyCollisions++;
 
+            // play animation
             Instantiate(hitAnimation, gameObject.transform.position + (Vector3.up), Quaternion.Euler(new Vector3(0,0,0)));
         }
     }

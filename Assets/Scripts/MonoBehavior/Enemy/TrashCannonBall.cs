@@ -26,13 +26,10 @@ public class TrashCannonBall : MonoBehaviour
             // Damage player
             Destroy(this.gameObject);
             Instantiate(hitExplosion, transform.position, transform.rotation);
-            //player.GetComponent<Player>().takeDamage(damageStrength);
         }
         else
         {
-            Debug.Log(hitInfo);
+            //Debug.Log(hitInfo);
         }
-
-        //Destroy(this.gameObject);
     }
 }
