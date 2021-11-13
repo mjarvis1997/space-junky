@@ -6,6 +6,7 @@ public class AnimationEvents : MonoBehaviour
 {
     public void Destroy()
     {
-       Destroy(gameObject);
+        Debug.Log("animator destroyed something");
+        Destroy(gameObject);
     }
 }

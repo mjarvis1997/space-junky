@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     /******************** PRIVATE VARIABLES ***************/
     private float CURR_HEALTH = 3;
     private float MAX_HEALTH = 3;
+    private bool isPlayerAlive = true;
     private Vector3 TipOfShipPosition;
     private Vector3 tipOfShipPosition;
     private int frameCounter = 0;
@@ -48,11 +49,13 @@ public class Player : MonoBehaviour
         }
 
         HandleShooting();
+        HandleHealth();
 
         // update current tip of ship position
         tipOfShipPosition = GameObject.Find("TipOfShip").transform.position;
     }
 
+    /******************** PRIVATE FUNCTIONS ********************/
     void HandleShooting() 
     {
         // when space bar is pressed
@@ -65,10 +68,28 @@ public class Player : MonoBehaviour
         }
     }
 
+    void HandleHealth()
+    {
+        // if player dies
+        if(CURR_HEALTH <= 0 && isPlayerAlive)
+        {
+            isPlayerAlive = false;
+            Debug.Log("player died!!!!!");
+
+            Instantiate(deathAnimation, gameObject.transform.position, Quaternion.Euler(new Vector3(0,0,0)));
+        }
+    }
+
     /******************** PUBLIC FUNCTIONS ********************/
-    public void takeDamage(float DMG, string collisionName) {
+    public void takeDamage(float DMG, string collisionName) 
+    {
         Utilities.logDamage(gameObject.name, collisionName, DMG);
         CURR_HEALTH -= DMG;
+    }
+    
+    public bool checkIfPlayerIsAlive()
+    {
+        return this.isPlayerAlive;
     }
 
     /******************** PRIVATE EVENT HANDLERS ********************/
@@ -83,7 +104,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col) 
     {
         // if collision is with an enemy
-         if(col.gameObject.layer == GlobalVars.LAYER_ENEMIES)
+         if(col.gameObject.layer == GlobalVars.LAYER_ENEMIES && !isPlayerInvincible)
          {
              HandleEnemyCollision(col.gameObject);
          }
@@ -98,25 +119,20 @@ public class Player : MonoBehaviour
         Utilities.logCollision("Player", parentName);
 
         // decide if the collision is valid
-        if(!isPlayerInvincible) 
-        {
+        if(isPlayerAlive && !isPlayerInvincible) 
+        {            
             // start iframes
             isPlayerInvincible = true;
             frameCounter = 0;
 
+            // instantiate collision animation
+            Instantiate(hitAnimation, gameObject.transform.position, Quaternion.Euler(new Vector3(0,0,0)));
+            
             // check how much damage the enemy deals
             float ENEMY_DMG = parentGo.GetComponent<EnemyHealth>().getDamage();
 
             // take damage
-            gameObject.GetComponent<Player>().takeDamage(ENEMY_DMG, parentName);
-
-            // log damage
-            Utilities.logDamage( gameObject.name, parentName, ENEMY_DMG);
-
-            // instantiate collision animation
-            Instantiate(hitAnimation, gameObject.transform.position + (Vector3.up), Quaternion.Euler(new Vector3(0,0,0)));
+            this.takeDamage(ENEMY_DMG, parentName);
         }
     }
-
-    
 }

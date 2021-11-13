@@ -57,11 +57,11 @@ public class GlobalVars : MonoBehaviour
 
     // basic zig zag pattern that travels down and to the right
     public static List<VectorPath> PATH_ZIGZAG_DOWN = new List<VectorPath>() {
-        new VectorPath(20, 6, Vector3.down + Vector3.right),
-        new VectorPath(20, 6, (Vector3.up * 0.5f) + Vector3.right),
-        new VectorPath(20, 4, Vector3.down + Vector3.right),
-        new VectorPath(20, 4, (Vector3.up * 0.5f) + Vector3.right),
-        new VectorPath(20, 4, Vector3.down + Vector3.right)
+        new VectorPath(5, 6, Vector3.down + Vector3.right),
+        new VectorPath(5, 6, (Vector3.up * 0.5f) + Vector3.right),
+        new VectorPath(5, 4, Vector3.down + Vector3.right),
+        new VectorPath(5, 4, (Vector3.up * 0.5f) + Vector3.right),
+        new VectorPath(5, 4, Vector3.down + Vector3.right)
     };
 
     public static SpawnConfig SPAWN_BASIC_LEFT = new SpawnConfig(

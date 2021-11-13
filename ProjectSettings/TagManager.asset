@@ -16,7 +16,7 @@ TagManager:
   - Enemies
   - Background
   - Augments
-  - 
+  - Animations
   - 
   - 
   - 
@@ -41,15 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 165359017
+    locked: 0
   - name: Player
     uniqueID: 2402119039
     locked: 0
-  - name: Background
-    uniqueID: 165359017
+  - name: Enemies
+    uniqueID: 3556966003
     locked: 0
   - name: Projectiles
     uniqueID: 876823601
     locked: 0
-  - name: Enemies
-    uniqueID: 3556966003
+  - name: Explosions
+    uniqueID: 4126825357
     locked: 0
