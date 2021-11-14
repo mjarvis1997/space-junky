@@ -56,17 +56,80 @@ public class GlobalVars : MonoBehaviour
     // movement paths
 
     // basic zig zag pattern that travels down and to the right
-    public static List<VectorPath> PATH_ZIGZAG_DOWN = new List<VectorPath>() {
-        new VectorPath(5, 6, Vector3.down + Vector3.right),
-        new VectorPath(5, 6, (Vector3.up * 0.5f) + Vector3.right),
-        new VectorPath(5, 4, Vector3.down + Vector3.right),
-        new VectorPath(5, 4, (Vector3.up * 0.5f) + Vector3.right),
-        new VectorPath(5, 4, Vector3.down + Vector3.right)
+    public static List<VectorPath> PATH_ZIGZAG_DOWN = new List<VectorPath>()
+    {
+        new VectorPath(2, 6, Vector3.down + Vector3.right),
+        new VectorPath(2, 6, (Vector3.up * 0.5f) + Vector3.right),
+        new VectorPath(2, 4, Vector3.down + Vector3.right),
+        new VectorPath(2, 4, (Vector3.up * 0.5f) + Vector3.right),
+        new VectorPath(2, 4, Vector3.down + Vector3.right)
     };
 
-    public static SpawnConfig SPAWN_BASIC_LEFT = new SpawnConfig(
+    public static List<VectorPath> PATH_SQUARE_WAVE_RIGHT = new List<VectorPath>()
+    {
+        new VectorPath(2, 5, Vector3.right),
+        new VectorPath(2, 5, Vector3.down),
+        new VectorPath(2, 5, Vector3.right),
+        new VectorPath(2, 5, Vector3.up),
+        new VectorPath(2, 5, Vector3.right),
+        new VectorPath(2, 5, Vector3.down)
+    };
+
+    public static List<VectorPath> PATH_SQUARE_WAVE_LEFT = new List<VectorPath>()
+    {
+        new VectorPath(2, 5, Vector3.left),
+        new VectorPath(2, 5, Vector3.down),
+        new VectorPath(2, 5, Vector3.left),
+        new VectorPath(2, 5, Vector3.up),
+        new VectorPath(2, 5, Vector3.left),
+        new VectorPath(2, 5, Vector3.down)
+    };
+
+    public static List<VectorPath> PATH_RR = new List<VectorPath>()
+    {
+        new VectorPath(2, 8, Vector3.up),
+        new VectorPath(2, 4, Vector3.right),
+        new VectorPath(2, 4, Vector3.down),
+        new VectorPath(2, 4, Vector3.left),
+        new VectorPath(2, 6, Vector3.down + Vector3.right),
+        new VectorPath(2, 8, Vector3.up),
+        new VectorPath(2, 4, Vector3.right),
+        new VectorPath(2, 4, Vector3.down),
+        new VectorPath(2, 4, Vector3.left),
+        new VectorPath(2, 6, Vector3.down + Vector3.right)
+    };
+
+    public static List<VectorPath> PATH_TRIANGLE = new List<VectorPath>()
+    {
+        new VectorPath(2, 8, Vector3.up + Vector3.right),
+        new VectorPath(2, 6, Vector3.left),
+        new VectorPath(2, 10, Vector3.down + Vector3.right)
+    };
+
+    public static List<VectorPath> PATH_TRIANGLE_REPEAT = new List<VectorPath>()
+    {
+        new VectorPath(2.5f, 6f, Vector3.up + Vector3.right),
+        new VectorPath(2.5f, 4f, Vector3.left),
+        new VectorPath(2.5f, 3f, Vector3.down + Vector3.right),
+        new VectorPath(2.5f, 6f, Vector3.up + Vector3.right),
+        new VectorPath(2.5f, 4f, Vector3.left),
+        new VectorPath(2.5f, 3f, Vector3.down + Vector3.right),
+        new VectorPath(2.5f, 6f, Vector3.up + Vector3.right),
+        new VectorPath(2.5f, 4f, Vector3.left),
+        new VectorPath(2.5f, 3f, Vector3.down + Vector3.right)
+    };
+
+    public static SpawnConfig SPAWN_BASIC_LEFT = new SpawnConfig
+    (
         new Vector3(-10, 7, 0), 
         Vector3.down + Vector3.left,
+        defaultOrientation
+    );
+
+    public static SpawnConfig SPAWN_BASIC_RIGHT = new SpawnConfig
+    (
+        new Vector3(10, 7, 0), 
+        Vector3.down + Vector3.right,
         defaultOrientation
     );
 }
