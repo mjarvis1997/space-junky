@@ -126,7 +126,7 @@ public class Player : MonoBehaviour
             frameCounter = 0;
 
             // instantiate collision animation
-            Instantiate(hitAnimation, gameObject.transform.position, Quaternion.Euler(new Vector3(0,0,0)));
+            Instantiate(hitAnimation, go.transform.position, Quaternion.Euler(new Vector3(0,0,0)));
             
             // check how much damage the enemy deals
             float ENEMY_DMG = parentGo.GetComponent<EnemyHealth>().getDamage();

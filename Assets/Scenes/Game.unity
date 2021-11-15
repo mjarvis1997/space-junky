@@ -956,6 +956,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8220834160867419000, guid: e023ea69e7ef71b4d8ba7688cc80b3f6, type: 3}
+      propertyPath: hitAnimation
+      value: 
+      objectReference: {fileID: 574523627458369034, guid: 668a716101a3820429de14a6421f9c26, type: 3}
+    - target: {fileID: 8220834160867419000, guid: e023ea69e7ef71b4d8ba7688cc80b3f6, type: 3}
       propertyPath: deathAnimation
       value: 
       objectReference: {fileID: 3038988828756523161, guid: e2e4333444a9117428443c5601974e46, type: 3}

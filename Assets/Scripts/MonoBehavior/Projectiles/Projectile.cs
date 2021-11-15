@@ -8,7 +8,6 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     /******************** PUBLIC VARIABLES ***************/
-    public GameObject hitAnimation;
     
     /******************** PRIVATE VARIABLES ***************/
     private float MOVE_SPEED;
@@ -109,8 +108,6 @@ public class Projectile : MonoBehaviour
             namesOfEnemiesHit.Add(parentName);
             numOfEnemyCollisions++;
 
-            // play animation
-            Instantiate(hitAnimation, gameObject.transform.position + (Vector3.up), Quaternion.Euler(new Vector3(0,0,0)));
         }
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     /******************** PUBLIC VARIABLES ********************/
+    public GameObject pfEnemyHitExplosion;
+    public GameObject pfEnemyDeathExplosion;
     public float MAX_HEALTH;
     public float DAMAGE;
 
@@ -18,28 +20,32 @@ public class EnemyHealth : MonoBehaviour
         CURR_HEALTH = MAX_HEALTH;
     }
 
-    void Update()
-    {
-        handleHealth();
-    }
-
     /******************** PRIVATE FUNCTIONS ***************/
     private void die()
     {
+        Instantiate(pfEnemyDeathExplosion, gameObject.transform.position, Quaternion.Euler(new Vector3(0,0,0)));
         Destroy(gameObject);
     }
 
-    private void handleHealth() 
+    void playHitAnimation()
     {
-        if (CURR_HEALTH <= 0.0f) 
-        {
-            die();
-        }
+        Instantiate(pfEnemyHitExplosion, gameObject.transform.position, Quaternion.Euler(new Vector3(0,0,0)));
     }
 
     /******************** PUBLIC FUNCTIONS ***************/
-    public void takeDamage(float DMG) {
+    public void takeDamage(float DMG) 
+    {
         CURR_HEALTH -= DMG;
+
+        if(CURR_HEALTH <= 0.0f)
+        {
+            die();
+        } 
+        else 
+        {
+            playHitAnimation();
+        }
+        
     }
 
     public float getDamage()
